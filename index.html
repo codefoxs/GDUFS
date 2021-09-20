@@ -22,6 +22,26 @@
             win.addEventListener(resizeEvt, recalc, false);
             doc.addEventListener('DOMContentLoaded', recalc, false);
         })(document, window);
+        
+        var t=new Date();
+        var year=t.getFullYear();
+        var month=t.getMonth()+1;
+        var day=t.getDate();
+        var hour=t.getHours();
+        
+        var nowdate = year + "-" + month + "-" + day;
+        var predate = year + "-" + month + "-" + (day-1);
+        var prepredate = year + "-" + month + "-" + (day-2);
+        
+        var start_time = (hour-1) + ":" + "00";
+        var end_time = (hour+1) + ":" + "00";
+        
+        var pretime1 = predate + "  " + "10:29";
+        var pretime2 = predate + "  " + "22:03";
+        var starttime = nowdate + "  " + start_time;
+        var endtime = nowdate + "  " + end_time;
+        var prepretime = prepredate + "  " + "9:07"
+        
     </script>
     <style type="text/css">
         * {
@@ -161,10 +181,10 @@
 </head>
 <body>
 <header>
-    <img src="https://sm.ms/image/9on5ZNKgMW7iFPY"/>
+    <img src="https://wx.qlogo.cn/mmopen/vi_32/s28jUTVG9j2iaaNT5XWkAJ4uILQiaQJtdZvxVtsGbDWhVlDEEL5WAsshbBgUFOibjbfPTQP2jvQn9ElKHQuHErBUQ/132"/>
     <div class="header-r">
         <div class="header-rt">陈治伍</div>
-        <div class="header-rb">金融学院(金融工程1803)</div>
+        <div class="header-rb">金融学院(金融工程1802)</div>
     </div>
 </header>
 <section>
@@ -175,14 +195,18 @@
         </li>
         <li class="list">
             <div class="lisft">请假开始时间:</div>
-            <div class="listr">
-                2021-09-20 18:30
+            <div class="listr" id="id1">
+                <script type="text/javascript">
+                    document.write(starttime);
+                </script>
             </div>
         </li>
         <li class="list">
             <div class="lisft">请假结束时间:</div>
             <div class="listr">
-                2021-09-20 21:00
+                <script type="text/javascript">
+                    document.write(endtime);
+                </script>
             </div>
         </li>
         <li class="list">
@@ -193,7 +217,11 @@
         </li>
         <li class="list">
             <div class="lisft">申请时间:</div>
-            <div class="listr">2021-09-15 09:07</div>
+            <div class="listr">
+                <script type="text/javascript">
+                    document.write(prepretime);
+                </script>
+            </div>
         </li>
         <li class="list">
             <div class="lisft">是否离校:</div>
@@ -217,13 +245,17 @@
 <section class="foot">
     <img src="https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLB8wiaFXs0qfRGWxXDiaqiaKQMZpLnk6SZc4YlcVhQvxiaNGlibmOgiaKL2IMFL8j2us8lKx8kznIbMpOw/132"/>
     <div class="foot-r">
-        <div class="header-rt">吴志馨</div>
+        <div class="header-rt">吴凯茜</div>
         <div class="foot-rb">
             <div>
             <div>
                 审批通过
             </div>
-    <div>2021-09-19 12:53</div>
+    <div>
+        <script type="text/javascript">
+            document.write(pretime1);
+        </script>
+    </div>
     </div>
     <div></div>
     </div>
@@ -239,7 +271,11 @@
             <div>
                 审批通过
             </div>
-    <div>2021-09-19 22:30</div>
+    <div>
+        <script type="text/javascript">
+            document.write(pretime2);
+        </script>
+    </div>
     </div>
     <div></div>
     </div>
